@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 public class StatementGeneratorTest {
     @Test
-    public void generateStatementForAJourney(){
+    public void generateStatementForAJourneyGivenTotalFare(){
         StatementGenerator generator = new StatementGenerator();
         int totalFare = generator.create(15);
         assertEquals(150, totalFare);
