@@ -1,7 +1,7 @@
 build
 .idea
 .gradle
-gradle*
+gradle/*
 .DS_Store
 out
 .classpath
