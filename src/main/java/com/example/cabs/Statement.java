@@ -1,7 +1,5 @@
 package com.example.cabs;
 
-import java.util.Objects;
-
 public class Statement {
     private int numberOfRides;
     private double farePerRide;
@@ -13,27 +11,15 @@ public class Statement {
         this.totalFare = totalFare;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Statement statement = (Statement) o;
-        return numberOfRides == statement.numberOfRides &&
-                Double.compare(statement.farePerRide, farePerRide) == 0 &&
-                Double.compare(statement.totalFare, totalFare) == 0;
+    public int getNumberOfRides() {
+        return numberOfRides;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(numberOfRides, farePerRide, totalFare);
+    public double getFarePerRide() {
+        return farePerRide;
     }
 
-    @Override
-    public String toString() {
-        return "Statement{" +
-                "numberOfRides=" + numberOfRides +
-                ", farePerRide=" + farePerRide +
-                ", totalFare=" + totalFare +
-                '}';
+    public double getTotalFare() {
+        return totalFare;
     }
 }
